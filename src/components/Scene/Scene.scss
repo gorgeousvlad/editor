@@ -1,6 +1,19 @@
-.scene{
+.editor__scene{
   position: relative;
   width: 1024px;
   height: 560px;
   font-family: 'Noto Sans', sans-serif;
+  background-color: black;
+  overflow: hidden;
+  border: 2px solid gray;
+}
+.position-label{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: green;
+  transform: translate(105%,-50%);
+}
+.handle{
+  display: inline-block;
 }

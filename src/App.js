@@ -6,7 +6,7 @@ import Scene from './components/Scene/Scene';
 class App extends Component {
   render() {
     return (
-      <Scene/>
+      <Scene grid = {true}/>
     );
   }
 }
