@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Button from'../elements/Button/Button';
 
 export default class ElementFabric{
@@ -9,7 +10,9 @@ export default class ElementFabric{
     switch(element.element){
       case "button":{
          return <Button
-         {...element}/>
+         {...element}
+         ref = "myButton"
+         />
       }
     }
   }

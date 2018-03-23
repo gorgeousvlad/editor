@@ -13,8 +13,9 @@ export default class Grid extends Component {
     return (
       <div className = {`${PREFIX}__scene__grid`}>
         <div className = {`${PREFIX}__scene__grid__rows`}>
-          {R.range(0,rows).map(()=>{
+          {R.range(0,rows).map((index)=>{
               return  <div
+                  key = {`gridrow-${index}`}
                   className  = {`${PREFIX}__scene__grid__cell`}
                   style = {{height:grid.cell}}
                 />})
@@ -22,8 +23,9 @@ export default class Grid extends Component {
         </div>
         <div className = {`${PREFIX}__scene__grid__columns`}>
           {
-            R.range(0,columns).map(()=>{
+            R.range(0,columns).map((index)=>{
               return <div
+                key = {`gridcolumn-${index}`}
                 className  = {`${PREFIX}__scene__grid__cell`}
                 style = {{width:grid.cell}}
               />})

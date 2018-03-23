@@ -1,4 +1,4 @@
-@mixin button ($class: "element__button", $width: 140px, $height: 42px, $font: 20px){
+@mixin button ($class: "element__button", $height: 42px, $font: 22px){
     .#{$class}{
       position: relative;
       display: inline-flex;
@@ -8,22 +8,23 @@
       font-size: $font;
       align-items:center;
       &.#{$class}__basic{
-        color: white;
-        background-color: #70c5e2;
+        color: midnightblue;
+        background-color: magenta;
         border-width:0;
+        opacity: 0.8;
         &:hover{
-          background-color: #39b6e2;
+          opacity: 1;
         }
       }
-      &.#{$class}__choice{
-        color: #3A76A3;
-        background-color: white;
-        box-sizing:border-box;
-        border:2px solid #3A76A3;
-        &:hover{
-          background-color: #f2f2f2;
-        }
-      }
+      // &.#{$class}__choice{
+      //   color: #3A76A3;
+      //   background-color: white;
+      //   box-sizing:border-box;
+      //   border:2px solid #3A76A3;
+      //   &:hover{
+      //     background-color: #f2f2f2;
+      //   }
+      // }
       &.#{$class}--wrong{
         color:white;
         background-color: #EE5A68;

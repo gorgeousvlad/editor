@@ -2,9 +2,10 @@
   position: relative;
   width: 1024px;
   height: 560px;
-  font-family: 'Noto Sans', sans-serif;
+  //font-family: 'Noto Sans', sans-serif;
   background-color: black;
   overflow: hidden;
+  // box-sizing:border-box;
   border: 2px solid gray;
 }
 .position-label{
@@ -13,6 +14,7 @@
   right: 0;
   color: green;
   transform: translate(105%,-50%);
+  white-space: nowrap;
 }
 .handle{
   display: inline-block;
