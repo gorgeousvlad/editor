@@ -27,7 +27,7 @@ export default class Scene extends Component {
   }
   render() {
     return (
-      <div className = {`${PREFIX}__scene`}>
+      <div className = "workplace__scene">
       {this.props.grid? <Grid/> : null}
         {elements.map( (el,index) => {
           return <Draggable

@@ -1,12 +1,13 @@
-.editor__scene{
+.workplace__scene{
   position: relative;
   width: 1024px;
   height: 560px;
   //font-family: 'Noto Sans', sans-serif;
   background-color: black;
-  overflow: hidden;
+  overflow: visible;
   // box-sizing:border-box;
   border: 2px solid gray;
+  border-top-width:0;
 }
 .position-label{
   position: absolute;
