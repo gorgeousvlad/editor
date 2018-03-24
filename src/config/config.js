@@ -5,6 +5,6 @@ const
     height:560
   },
   grid = {
-    cell:30
+    cell:20
   }
 export {PREFIX,scene,grid}

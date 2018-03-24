@@ -19,7 +19,11 @@ let fabric = new ElementFabric();
 export default class Scene extends Component {
   constructor(props){
     super();
-    this.state = DEFAULT
+    this.state = { 
+      deltaPosition: {
+        x: 0, y: 0
+      }
+    }
   }
   render() {
     return (
@@ -29,26 +33,24 @@ export default class Scene extends Component {
           return <Draggable
             key = {`scene-draggable-${index}`}
             handle=".handle"
-            defaultPosition={DEFAULT}
+            // defaultPosition={DEFAULT}
             position={null}
-            bounds = {{
-              left:0,
-              top:0,
-              bottom:scene.height,
-              scene:scene.width,
-              right:1024
-            }}
-            grid={[grid.cell, grid.cell]}
-            onStart={(e)=>{
-            }}
-            onDrag={(e)=>{
-              //пока что координаты мыши, сделать объекта
-              this.setState({x: e.x,y:e.y})
+            bounds = "parent"
+            grid={this.props.grid?[grid.cell, grid.cell]:null}
+            onStart={this.handleStart}
+            onDrag={(e,ui)=>{
+              const {x, y} = this.state.deltaPosition;
+              this.setState({
+                deltaPosition: {
+                  x: x + ui.deltaX,
+                  y: y + ui.deltaY,
+                }
+              });
             }}
             onStop={this.handleStop}>
             <div className = "handle" ref = {(ref)=>{this.ref = ref;}}>
               {fabric.create(Object.assign({}, el, {key:`${el.element}-${index}`}))}
-              <div className = "position-label">{`x : ${this.state.x}, y : ${this.state.y}`}</div>
+              <div className = "position-label">{`x : ${this.state.deltaPosition.x}, y : ${this.state.deltaPosition.y}`}</div>
             </div>
           </Draggable>
         })}

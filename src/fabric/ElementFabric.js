@@ -11,7 +11,6 @@ export default class ElementFabric{
       case "button":{
          return <Button
          {...element}
-         ref = "myButton"
          />
       }
     }
