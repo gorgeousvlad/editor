@@ -1,0 +1,42 @@
+@import './../../styles/mixins';
+
+.workplace__component-bar{
+	grid-area:component-bar;
+  background-color: #34d8f5;
+  min-width: 200px;
+}
+.component-bar__tab-wrapper{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.component-bar__tab{
+  height: 30px;
+  padding: 0 10px;
+  border:2px solid black;
+  background-color: white;
+  line-height: 30px;
+  box-sizing: border-box;
+  @include hover();
+  &:hover{
+    background-color: #fafafa;
+  }
+  &.active{
+    transform:scale(1.05);
+  }
+
+}
+.component-bar__field{
+  display: flex;
+  justify-content: space-around;
+  padding:10px;
+}
+.component-bar__component{
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-color: green;
+  margin-right: 10px;
+}

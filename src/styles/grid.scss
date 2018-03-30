@@ -5,12 +5,12 @@
 	border:2px solid grey;
 }
 .main-menu,.workplace__component-bar,.workplace__propperties-bar{
-	opacity: 0.5;
+	opacity: 0.4;
 }
-.workplace__component-bar{
-	grid-area:component-bar;
-	background-color: #34d8f5;
-}
+// .workplace__component-bar{
+// 	grid-area:component-bar;
+// 	background-color: #34d8f5;
+// }
 .workplace__propperties-bar{
 	grid-area:propperties-bar;
 	background-color: #c444ef;

@@ -18,7 +18,7 @@ let fabric = new ElementFabric();
 
 export default class Scene extends Component {
   constructor(props){
-    super();
+    super(props);
     this.state = { 
       deltaPosition: {
         x: 0, y: 0
