@@ -33,7 +33,7 @@ const componentsTest = {
     {
       name:'switcher',
       thumb:"",
-      label:"переключатель слов"
+      label:"слово"
     }
   ]
 

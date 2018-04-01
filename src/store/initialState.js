@@ -1,4 +1,4 @@
 export default {  
-  project: [],
+  scene: [],
   components: {},
 }

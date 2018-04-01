@@ -1,8 +1,7 @@
 import {combineReducers} from 'redux';
 import {ADD_ELEMENT,LOAD_COMPONENTS_SUCCESS} from '../actions/actions';
-import {initialState} from '../state/initialState';
+import initialState from '../store/initialState';
 
-//список компонентов с разбивкой по проектам, который приходит с сервера
 function components(state = initialState.components, action) {
   switch (action.type) {
     case LOAD_COMPONENTS_SUCCESS:
@@ -12,8 +11,7 @@ function components(state = initialState.components, action) {
   }
 };
 
-//текущий проект, то есть что в данный момент на сцене
-function project(state = initialState.project, action) {
+function scene(state = initialState.scene, action) {
   switch (action.type) {
     case ADD_ELEMENT:{
       return [
@@ -28,7 +26,7 @@ function project(state = initialState.project, action) {
 
 const rootReducer = combineReducers({
   components,
-  project
+  scene
 });
 
 export default rootReducer;
