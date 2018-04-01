@@ -5,21 +5,25 @@ import './styles/grid.scss';
 import ComponentBar from './components/ComponentBar/ComponentBar';
 import Scene from './components/Scene/Scene';
 
+
 const componentsTest = {
   common:[
     {
       name:"button",
-      thumb:""
+      thumb:"button.svg",
+      label:"кнопка"
     },
     {
       name:"input",
-      thumb:""
+      thumb:"",
+      label:"инпут"
     }
   ],
   project1:[
     {
       name:'wordSwitcher',
-      thumb:""
+      thumb:"",
+      label:"переключатель слов"
     }
   ]
 
@@ -33,7 +37,6 @@ class App extends Component {
 	    <div className = "workplace">
         <ComponentBar 
           components = {componentsTest}
-          switchTab = {(tab) => console.log("Tab "+tab)}
           chooseComponent = {(name,project) => console.log("Choosen",name,project)}
         />
         <Scene 

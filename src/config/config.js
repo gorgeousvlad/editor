@@ -6,5 +6,6 @@ const
   },
   grid = {
     cell:20
-  }
-export {PREFIX,scene,grid}
+  },
+  THUMBS_PATH = "../../elements/thumbs/" 
+export {PREFIX,scene,grid,THUMBS_PATH}

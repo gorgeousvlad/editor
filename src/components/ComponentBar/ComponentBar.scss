@@ -1,8 +1,9 @@
 @import './../../styles/mixins';
 
 .workplace__component-bar{
-	grid-area:component-bar;
-  background-color: #34d8f5;
+  grid-area:component-bar;
+  opacity: 1;
+  //background-color: #34d8f5;
   min-width: 200px;
 }
 .component-bar__tab-wrapper{
@@ -35,8 +36,17 @@
 .component-bar__component{
   position: relative;
   display: inline-block;
-  height: 60px;
-  width: 60px;
-  background-color: green;
   margin-right: 10px;
+  text-align: center;
+  max-width:70px;
+  img{
+    height: 50px;
+    width: 50px;
+    display: block;
+    background-color: green;
+  }
+}
+.component-bar__label{
+  @include justifyAbsolute();
+
 }
