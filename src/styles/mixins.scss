@@ -2,6 +2,12 @@
   &:hover{
     cursor:pointer};
 }
+@mixin hoverScale{
+  @include hover;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
 @mixin justifyAbsolute{
   position: absolute;
   left:50%;

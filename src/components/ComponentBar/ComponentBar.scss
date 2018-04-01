@@ -34,6 +34,7 @@
   padding:10px;
 }
 .component-bar__component{
+  @include hoverScale();
   position: relative;
   display: inline-block;
   margin-right: 10px;

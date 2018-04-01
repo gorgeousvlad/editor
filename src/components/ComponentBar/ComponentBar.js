@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './ComponentBar.scss';
 import {importFiles} from '../../helpers/helper.js';
-// const R = require("ramda");
-
 
 export default class ComponentBar extends Component {
   constructor(props){
@@ -24,13 +22,13 @@ export default class ComponentBar extends Component {
           .map( (project,index) => 
           {
             return (
-                <div
-                    key = {`tab-${index}`} 
-                    className = {`component-bar__tab ${project===this.state.tab? "active" : ""}`}
-                    onClick = {this.switchTab.bind(this,project)}
-                >
-                {project}
-                </div>
+              <div
+                key = {`tab-${index}`} 
+                className = {`component-bar__tab ${project===this.state.tab? "active" : ""}`}
+                onClick = {this.switchTab.bind(this,project)}
+              >
+              {project}
+              </div>
             )
           })}
           </div>
@@ -39,15 +37,15 @@ export default class ComponentBar extends Component {
           .map((component,index) => {
             return (
                 
-                <div
-                    key = {`component-bar-component-${index}`} 
-                    className = {`component-bar__component component-bar__component--${component.name}`}
-                    onClick = {this.props.chooseComponent.bind(this,component.name,this.state.tab)}
-                >
-                <img src = {this.thumbs[component.thumb]} alt = {component.name}/>
-                <div className = 'component-bar__label'>{component.label}</div>
-                </div>
-              )
+              <div
+                key = {`component-bar-component-${index}`} 
+                className = {`component-bar__component component-bar__component--${component.name}`}
+                onClick = {this.props.chooseComponent.bind(this,component.name,this.state.tab)}
+              >
+              <img src = {this.thumbs[component.thumb]} alt = {component.name}/>
+              <div className = 'component-bar__label'>{component.label}</div>
+              </div>
+            )
           })
           }
           </div>

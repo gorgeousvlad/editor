@@ -9,6 +9,16 @@ import Scene from './components/Scene/Scene';
 const componentsTest = {
   common:[
     {
+      name:"div",
+      thumb:"",
+      label:"div"
+    },
+    {
+      name:"span",
+      thumb:"",
+      label:"span"
+    },
+    {
       name:"button",
       thumb:"button.svg",
       label:"кнопка"
@@ -21,7 +31,7 @@ const componentsTest = {
   ],
   project1:[
     {
-      name:'wordSwitcher',
+      name:'switcher',
       thumb:"",
       label:"переключатель слов"
     }
