@@ -8,6 +8,13 @@
     transform: scale(1.1);
   }
 }
+@mixin hoverOpacity{
+  @include hover;
+  opacity:0.9;
+  &:hover{
+    opacity: 1;
+  }
+}
 @mixin justifyAbsolute{
   position: absolute;
   left:50%;

@@ -43,7 +43,8 @@ export default class Scene extends Component {
             onStop={this.handleStop}>
             <div className = "handle" ref = {(ref)=>{this.ref = ref;}}>
               {fabric.create(Object.assign({}, el, {key:`${el.name}-${id}`}))}
-              <div className = "position-label">{`x : ${this.state.deltaPosition.x}, y : ${this.state.deltaPosition.y}`}</div>
+              <div className = "scene-close-button" onClick = {this.props.onDelete.bind(this,id)}>&#10006;</div>
+              {/* <div className = "position-label">{`x : ${this.state.deltaPosition.x}, y : ${this.state.deltaPosition.y}`}</div> */}
             </div>
           </Draggable>
         })}

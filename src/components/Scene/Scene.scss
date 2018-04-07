@@ -1,3 +1,4 @@
+@import './../../styles/mixins';
 .workplace__scene{
   position: relative;
   width: 1024px;
@@ -19,4 +20,18 @@
 }
 .handle{
   display: inline-block;
+  position: absolute;
+}
+.scene-close-button{
+  @include hoverOpacity();
+  position: absolute;
+  width:20px;
+  height: 20px;
+  text-align:center;
+  font-size:24px;
+  top: 0;
+  right: 0;
+  color: grey;
+  transform: translate(110%, -80%);
+  white-space: nowrap;
 }

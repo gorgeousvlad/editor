@@ -26,17 +26,17 @@ function scene(state = initialState.scene, action) {
     case ADD_ELEMENT:{
       return {
         ...state,
-        [Object.keys(state).length? (Math.max(...Object.keys(state)) + 1).toString():"1"] : {
+        [Object.keys(state).length? (Math.max(...Object.keys(state)) + 1).toString() : "1"] : {
           ...action.element
         }
       }
     }
     case DELETE_ELEMENT:{
-      return _.pickBy(state,(val,key) => key === action.id)
+      return _.omit(state,[action.id])
     }
     case EDIT_ELEMENT:{
       return {
-        ..._.pickBy(state,(val,key) => key === action.id),
+        ..._.omit(state,[action.id]),
         [action.id]:{
           props:action.props,
          ..._.omit(state[action.id],"props")
