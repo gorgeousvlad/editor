@@ -26,7 +26,7 @@ function scene(state = initialState.scene, action) {
     case ADD_ELEMENT:{
       return {
         ...state,
-        [Math.max(Object.keys(state)) + 1] : {
+        [Object.keys(state).length? (Math.max(...Object.keys(state)) + 1).toString():"1"] : {
           ...action.element
         }
       }

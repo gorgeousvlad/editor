@@ -1,11 +1,5 @@
 export default {  
-  scene:{
-    // "1":  {
-    //   name:"button",
-    //   type:"basic",
-    //   text:"Button"
-    // }
-  },
+  scene:{},
   elements: {
     common:{
       "1":{

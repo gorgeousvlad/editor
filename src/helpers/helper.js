@@ -3,3 +3,4 @@ export function importFiles(context) {
   context.keys().map((item, index) => { images[item.replace('./', '')] = context(item); });
   return images;
 }
+
