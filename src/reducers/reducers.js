@@ -27,7 +27,7 @@ function scene(state = initialState.scene, action) {
       return {
         ...state,
         [Math.max(Object.keys(state)) + 1] : {
-          ...action.component
+          ...action.element
         }
       }
     }

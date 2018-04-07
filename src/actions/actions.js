@@ -5,10 +5,10 @@ export const EDIT_ELEMENT = "EDIT_ELEMENT";
 export const LOAD_ELEMENTS_SUCCESS  = "LOAD_ELEMENTS_SUCCESS"
 
 
-export function addElement(component){
+export function addElement(element){
   return {
     type:ADD_ELEMENT,
-    id:component
+    element:element
   }
 };
 

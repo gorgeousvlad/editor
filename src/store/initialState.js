@@ -1,52 +1,49 @@
 export default {  
   scene:{
-    "1":  {
-      name:"button",
-      type:"basic",
-      text:"Button"
-    }
+    // "1":  {
+    //   name:"button",
+    //   type:"basic",
+    //   text:"Button"
+    // }
   },
   elements: {
-    common:[
-      {
+    common:{
+      "1":{
         name:"div",
         thumb:"",
         label:"div",
-        element:{
-          name:"button",
+        props:{
           type:"basic",
           text:"Button"
         }
       },
-      {
+      "2":{
         name:"label",
         thumb:"",
         label:"текст"
       },
-      {
+      "3":{
         name:"button",
         thumb:"button.svg",
         label:"кнопка",
-        element:{
-          name:"button",
+        props:{
           type:"basic",
           text:"Button"
         }
       },
-      {
+      "4":{
         name:"input",
         thumb:"",
         label:"инпут"
       }
-    ],
-    project1:[
-      {
+    },
+    project1:{
+      "1":{
         name:'switcher',
         thumb:"",
         label:"слово"
       }
-    ]
-  
+    }
   },
   selected:-1
 }

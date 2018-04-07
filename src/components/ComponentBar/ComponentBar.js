@@ -33,14 +33,13 @@ export default class ComponentBar extends Component {
           })}
           </div>
           <div className = "component-bar__field">
-          {this.props.elements[this.state.tab]
-          .map((component,index) => {
-            return (
-                
+          {Object.entries(this.props.elements[this.state.tab])
+          .map(([id,component]) => {
+            return (    
               <div
-                key = {`component-bar-component-${index}`} 
+                key = {`component-bar-component-${id}`} 
                 className = {`component-bar__component component-bar__component--${component.name}`}
-                onClick = {this.props.onChoice.bind(this,component.name,this.state.tab)}
+                onClick = {this.props.onChoice.bind(this,{name:component.name,...component.props})}
               >
               <img src = {this.thumbs[component.thumb]} alt = {component.name}/>
               <div className = 'component-bar__label'>{component.label}</div>

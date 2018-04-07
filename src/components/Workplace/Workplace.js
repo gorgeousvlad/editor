@@ -31,8 +31,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    addElement: (id) => {
-      dispatch(addElement(id))
+    addElement: (element) => {
+      dispatch(addElement(element))
     },
     selectElement: (id)=>{
       dispatch(selectElement(id))
