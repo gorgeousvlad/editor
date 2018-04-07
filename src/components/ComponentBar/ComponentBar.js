@@ -40,7 +40,7 @@ export default class ComponentBar extends Component {
               <div
                 key = {`component-bar-component-${index}`} 
                 className = {`component-bar__component component-bar__component--${component.name}`}
-                onClick = {this.props.chooseComponent.bind(this,component.name,this.state.tab)}
+                onClick = {this.props.onChoice.bind(this,component.name,this.state.tab)}
               >
               <img src = {this.thumbs[component.thumb]} alt = {component.name}/>
               <div className = 'component-bar__label'>{component.label}</div>

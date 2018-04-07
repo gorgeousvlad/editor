@@ -6,14 +6,7 @@ import ElementFabric from'../../fabric/ElementFabric';
 import {PREFIX, scene, grid} from '../../config/config';
 
 
-const elements = [
-  {
-    element:"button",
-    type:"basic",
-    text:"Button"
-  }
-],
-DEFAULT = {x: 60, y: 60};
+const DEFAULT = {x: 60, y: 60};
 let fabric = new ElementFabric();
 
 export default class Scene extends Component {
@@ -29,9 +22,9 @@ export default class Scene extends Component {
     return (
       <div className = "workplace__scene">
       {this.props.grid? <Grid/> : null}
-        {elements.map( (el,index) => {
+        {Object.entries(this.props.elements).map( ([id,el],index) => {
           return <Draggable
-            key = {`scene-draggable-${index}`}
+            key = {`scene-draggable-${id}`}
             handle=".handle"
             // defaultPosition={DEFAULT}
             position={null}
@@ -49,7 +42,7 @@ export default class Scene extends Component {
             }}
             onStop={this.handleStop}>
             <div className = "handle" ref = {(ref)=>{this.ref = ref;}}>
-              {fabric.create(Object.assign({}, el, {key:`${el.element}-${index}`}))}
+              {fabric.create(Object.assign({}, el, {key:`${el.element}-${id}`}))}
               <div className = "position-label">{`x : ${this.state.deltaPosition.x}, y : ${this.state.deltaPosition.y}`}</div>
             </div>
           </Draggable>

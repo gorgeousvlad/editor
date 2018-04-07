@@ -7,10 +7,6 @@
 .main-menu,.workplace__component-bar,.workplace__propperties-bar{
 	opacity: 0.4;
 }
-// .workplace__component-bar{
-// 	grid-area:component-bar;
-// 	background-color: #34d8f5;
-// }
 .workplace__propperties-bar{
 	grid-area:propperties-bar;
 	background-color: #c444ef;
@@ -20,7 +16,7 @@
 }
 .workplace{
 	display: grid;
-	grid-template-columns: 2fr 1024px 1fr;
+	grid-template-columns: 1fr 1024px 1fr;
 	grid-template-rows: 100%;
 	grid-template-areas:"component-bar scene propperties-bar";
 }
