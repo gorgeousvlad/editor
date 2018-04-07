@@ -13,8 +13,9 @@ let workplace = (props) => {
         />
         <Scene 
           elements = {props.scene}
+          selected = {props.selected}
           grid = {true}
-          onChoice = {props.selectElement}
+          onSelect = {props.selectElement}
           onDelete = {props.deleteElement}
         />
 	      <div className = "workplace__propperties-bar"/>

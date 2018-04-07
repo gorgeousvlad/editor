@@ -18,6 +18,11 @@ export default class Scene extends Component {
       }
     }
   }
+  onDelete(id,ev){
+    this.props.onDelete(id);
+    //сделать чтобы сбрасывался selected
+    ev.stopPropagation();
+  }
   render() {
     return (
       <div className = "workplace__scene">
@@ -25,7 +30,7 @@ export default class Scene extends Component {
         {Object.entries(this.props.elements).map( ([id,el],index) => {
           return <Draggable
             key = {`scene-draggable-${id}`}
-            handle=".handle"
+            handle=".scene__handle"
             // defaultPosition={DEFAULT}
             position={null}
             bounds = "parent"
@@ -41,9 +46,17 @@ export default class Scene extends Component {
               });
             }}
             onStop={this.handleStop}>
-            <div className = "handle" ref = {(ref)=>{this.ref = ref;}}>
+            <div 
+              className = "scene__handle" 
+              onClick = {this.props.onSelect.bind(this,id)}
+              ref = {(ref)=>{this.ref = ref;}
+            }>
               {fabric.create(Object.assign({}, el, {key:`${el.name}-${id}`}))}
-              <div className = "scene-close-button" onClick = {this.props.onDelete.bind(this,id)}>&#10006;</div>
+              {
+                this.props.selected === id? <div className = "handle__close-button" onClick = {this.onDelete.bind(this,id)}>&#10006;</div>
+                :null
+              }
+              
               {/* <div className = "position-label">{`x : ${this.state.deltaPosition.x}, y : ${this.state.deltaPosition.y}`}</div> */}
             </div>
           </Draggable>

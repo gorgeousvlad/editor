@@ -20,9 +20,12 @@ export function selectElement(id){
 };
 
 export function deleteElement(id){
-  return {
-    type:DELETE_ELEMENT,
-    id:id
+  return dispatch => {
+    dispatch(selectElement(-1));
+    dispatch({
+      type:DELETE_ELEMENT,
+      id:id
+    });
   }
 };
 

@@ -18,11 +18,11 @@
   transform: translate(105%,-50%);
   white-space: nowrap;
 }
-.handle{
+.scene__handle{
   display: inline-block;
   position: absolute;
 }
-.scene-close-button{
+.handle__close-button{
   @include hoverOpacity();
   position: absolute;
   width:20px;
