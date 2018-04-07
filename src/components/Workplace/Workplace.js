@@ -8,7 +8,7 @@ let workplace = (props) => {
     return (
       <div className="workplace">
        <ComponentBar 
-          components = {props.components}
+          elements = {props.elements}
           onChoice = {props.addElement}
         />
         <Scene 
@@ -25,7 +25,7 @@ let workplace = (props) => {
 const mapStateToProps = (state) => {
   return {
     scene:state.scene,
-    components:state.components,
+    elements:state.elements,
     selected:state.selected
   }
 }

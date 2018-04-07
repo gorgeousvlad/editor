@@ -2,7 +2,7 @@ export const ADD_ELEMENT = "ADD_ELEMENT";
 export const SELECT_ELEMENT = "SELECT_ELEMENT";
 export const DELETE_ELEMENT = "DELETE_ELEMENT";
 export const EDIT_ELEMENT = "EDIT_ELEMENT";
-export const LOAD_COMPONENTS_SUCCESS  = "LOAD_COMPONENTS_SUCCESS"
+export const LOAD_ELEMENTS_SUCCESS  = "LOAD_ELEMENTS_SUCCESS"
 
 
 export function addElement(component){
@@ -34,9 +34,9 @@ export function editElement(id,props){
   }
 };
 
-export function loadComponentsSuccess(components){
+export function loadElementsSuccess(components){
   return {
-    type:LOAD_COMPONENTS_SUCCESS,
+    type:LOAD_ELEMENTS_SUCCESS,
     components:components
   }
 };

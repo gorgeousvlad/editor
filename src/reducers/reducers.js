@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
-import {ADD_ELEMENT,SELECT_ELEMENT,DELETE_ELEMENT,EDIT_ELEMENT,LOAD_COMPONENTS_SUCCESS} from '../actions/actions';
+import {ADD_ELEMENT,SELECT_ELEMENT,DELETE_ELEMENT,EDIT_ELEMENT,LOAD_ELEMENTS_SUCCESS} from '../actions/actions';
 import initialState from '../store/initialState';
 const _ = require('lodash');
 
-function components(state = initialState.components, action) {
+function elements(state = initialState.elements, action) {
   switch (action.type) {
-    case LOAD_COMPONENTS_SUCCESS:
-      return action.components;
+    case LOAD_ELEMENTS_SUCCESS:
+      return action.elements;
   default:
     return state
   }
@@ -50,7 +50,7 @@ function scene(state = initialState.scene, action) {
 };
 
 const rootReducer = combineReducers({
-  components,
+  elements,
   selected,
   scene
 });

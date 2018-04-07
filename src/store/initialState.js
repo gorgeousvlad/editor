@@ -1,17 +1,22 @@
 export default {  
   scene:{
     "1":  {
-      element:"button",
+      name:"button",
       type:"basic",
       text:"Button"
     }
   },
-  components: {
+  elements: {
     common:[
       {
         name:"div",
         thumb:"",
-        label:"div"
+        label:"div",
+        element:{
+          name:"button",
+          type:"basic",
+          text:"Button"
+        }
       },
       {
         name:"label",
@@ -21,7 +26,12 @@ export default {
       {
         name:"button",
         thumb:"button.svg",
-        label:"кнопка"
+        label:"кнопка",
+        element:{
+          name:"button",
+          type:"basic",
+          text:"Button"
+        }
       },
       {
         name:"input",

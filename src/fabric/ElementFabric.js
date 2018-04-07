@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Button from'../elements/Button/Button';
 
 export default class ElementFabric{
@@ -7,12 +6,13 @@ export default class ElementFabric{
     this.props = props
   }
   create(element){
-    switch(element.element){
+    switch(element.name){
       case "button":{
          return <Button
          {...element}
          />
       }
+      default:
     }
   }
 }

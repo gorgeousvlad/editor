@@ -9,7 +9,7 @@ export default class Button extends Component {
 
   }
   render(){
-    let base = `element__${this.props.element}`
+    let base = `element__${this.props.name}`
     return <div
       className = {`${base} ${base}__${this.props.type} ${base}--${this.props.curState||"default"}`}
       onClick = {this._onClick.bind(this)}

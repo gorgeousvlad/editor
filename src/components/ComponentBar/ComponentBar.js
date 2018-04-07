@@ -18,7 +18,7 @@ export default class ComponentBar extends Component {
     return (
       <div className = "workplace__component-bar">
           <div className = "component-bar__tab-wrapper">
-          {Object.keys(this.props.components)
+          {Object.keys(this.props.elements)
           .map( (project,index) => 
           {
             return (
@@ -33,7 +33,7 @@ export default class ComponentBar extends Component {
           })}
           </div>
           <div className = "component-bar__field">
-          {this.props.components[this.state.tab]
+          {this.props.elements[this.state.tab]
           .map((component,index) => {
             return (
                 
