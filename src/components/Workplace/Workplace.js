@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {addElement,selectElement,deleteElement,editElement} from "../../actions/actions"
 import ComponentBar from '../ComponentBar/ComponentBar';
+import PropertyBar from '../PropertyBar/PropertyBar';
 import Scene from '../Scene/Scene';
+const _ = require("lodash");
+
 
 let workplace = (props) => {
     return (
@@ -11,14 +14,17 @@ let workplace = (props) => {
           elements = {props.elements}
           onChoice = {props.addElement}
         />
-        <Scene 
-          elements = {props.scene}
-          selected = {props.selected}
-          grid = {true}
-          onSelect = {props.selectElement}
-          onDelete = {props.deleteElement}
-        />
-	      <div className = "workplace__propperties-bar"/>
+      <Scene 
+        elements = {props.scene}
+        selected = {props.selected}
+        grid = {true}
+        onSelect = {props.selectElement}
+        onDelete = {props.deleteElement}
+      />
+      <PropertyBar
+        selected = {props.selected}
+        properties = {props.selected?_.values( _.pick(props.scene,props.selected))[0]:{}}
+      />
       </div>
     );
 }

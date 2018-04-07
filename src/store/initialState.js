@@ -39,5 +39,5 @@ export default {
       }
     }
   },
-  selected:-1
+  selected:0
 }

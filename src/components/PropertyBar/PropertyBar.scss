@@ -1,0 +1,15 @@
+.workplace__property-bar{
+	grid-area:propperties-bar;
+	//background-color: #c444ef;
+}
+.property-bar__table{
+	width: 100%;
+	//border:2px solid blue;
+	thead{
+		text-align: center;
+	}
+	td{
+		padding:10px;
+		border:2px solid midnightblue;
+	}
+}
