@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Table} from 'react-bootstrap'
 import './PropertyBar.scss';
 
 export default class PropertyBar extends Component {
@@ -9,7 +10,7 @@ export default class PropertyBar extends Component {
   render() {
     return (
       <div className = "workplace__property-bar">
-      <table className = "property-bar__table">
+        <Table bordered={true} hover={true}>
       <thead>
         <tr><td>Свойство</td><td>Значение</td></tr>
       </thead>
@@ -26,7 +27,7 @@ export default class PropertyBar extends Component {
         :null
       }
       </tbody>
-      </table>
+      </Table>
       </div>
     );
   }

@@ -23,6 +23,9 @@ export default {
         props:{
           type:"basic",
           text:"Button"
+        },
+        propTypes: {
+          type: ["basic", "next", "restart"]
         }
       },
       "4":{

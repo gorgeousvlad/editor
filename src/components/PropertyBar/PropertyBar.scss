@@ -2,6 +2,12 @@
 	grid-area:propperties-bar;
 	//background-color: #c444ef;
 }
+.workplace__property-bar table{
+	thead{
+		text-align: center;
+		background-color: rgba(234,93,196,0.2);
+	}
+}
 .property-bar__table{
 	width: 100%;
 	border-collapse: collapse;
