@@ -14,7 +14,7 @@ export default class PropertyBar extends Component {
         <tr><td>Свойство</td><td>Значение</td></tr>
       </thead>
       <tbody> 
-        {Object.keys(this.props.properties).length?
+            {this.props.properties && Object.keys(this.props.properties).length?
         Object.entries({elment:`${this.props.properties.name}-${this.props.selected}`,...this.props.properties}).map(([name,val],index) => {
           return (
             <tr key = {`row-name-${index}`}>

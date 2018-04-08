@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {addElement,selectElement,deleteElement,editElement} from "../../actions/actions"
 import ComponentBar from '../ComponentBar/ComponentBar';
