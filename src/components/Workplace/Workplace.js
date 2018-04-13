@@ -11,9 +11,9 @@ let workplace = (props) => {
     return (
       <div className="workplace">
        <ComponentBar 
-          elements = {props.elements}
-          onChoice = {props.addElement}
-        />
+        elements = {props.elements}
+        onChoice = {props.addElement}
+      />
       <Scene 
         elements = {props.scene}
         selected = {props.selected}
@@ -24,6 +24,7 @@ let workplace = (props) => {
       <PropertyBar
         selected = {props.selected}
         properties = {props.selected?_.values( _.pick(props.scene,props.selected))[0]:{}}
+        onEdit = {props.editElement}
       />
       </div>
     );
@@ -48,7 +49,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(deleteElement(id))
     },
     editElement: (id, props)=>{
-      dispatch(deleteElement(id,props))
+      dispatch(editElement(id,props))
     }
   }
 }
