@@ -37,10 +37,7 @@ function scene(state = initialState.scene, action) {
     case EDIT_ELEMENT:{
       return {
         ..._.omit(state,[action.id]),
-        [action.id]:{
-          props:action.props,
-         ..._.omit(state[action.id],"props")
-        }
+        [action.id]:action.props
       }
     }
     
