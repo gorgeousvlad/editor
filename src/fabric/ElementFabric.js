@@ -6,7 +6,7 @@ export default class ElementFabric{
     this.props = props
   }
   create(element){
-    switch(element.name){
+    switch(element.component){
       case "button":{
          return <Button
          {...element}

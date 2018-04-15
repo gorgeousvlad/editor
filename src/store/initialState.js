@@ -3,7 +3,7 @@ export default {
   elements: {
     common:{
       "1":{
-        name:"div",
+        component:"div",
         thumb:"",
         label:"div",
         props:{
@@ -12,12 +12,12 @@ export default {
         }
       },
       "2":{
-        name:"label",
+        component:"label",
         thumb:"",
         label:"текст"
       },
       "3":{
-        name:"button",
+        component:"button",
         thumb:"button.svg",
         label:"кнопка",
         props:{
@@ -29,14 +29,14 @@ export default {
         }
       },
       "4":{
-        name:"input",
+        component:"input",
         thumb:"",
         label:"инпут"
       }
     },
     project1:{
       "1":{
-        name:'switcher',
+        component:'switcher',
         thumb:"",
         label:"слово"
       }

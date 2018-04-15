@@ -51,7 +51,7 @@ export default class Scene extends Component {
               onClick = {this.props.onSelect.bind(this,id)}
               ref = {(ref)=>{this.ref = ref;}
             }>
-              {fabric.create(Object.assign({}, el, {key:`${el.name}-${id}`}))}
+              {fabric.create(Object.assign({}, el, {key:`${el.component}-${id}`}))}
               {
                 this.props.selected === id? <div className = "handle__close-button" onClick = {this.onDelete.bind(this,id)}>&#10006;</div>
                 :null

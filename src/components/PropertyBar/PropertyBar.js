@@ -6,6 +6,7 @@ const _  = require("lodash");
 export default class PropertyBar extends Component {
   constructor(props){
     super(props);
+    this.readOnly = ["id","component"];
     this.state = {editing: "", value: ""}
   }
   onClick(el,val){
@@ -24,13 +25,14 @@ export default class PropertyBar extends Component {
         <tr><td>Свойство</td><td>Значение</td></tr>
       </thead>
       <tbody> 
-            {this.props.properties && Object.keys(this.props.properties).length?
-        Object.entries({element:`${this.props.properties.name}-${this.props.selected}`,...this.props.properties}).map(([name,val],index) => {
+        {this.props.properties && Object.keys(this.props.properties).length?
+        Object.entries({id:`${this.props.properties.component}-${this.props.selected}`,...this.props.properties}).map(([name,val],index) => {
+          const readOnly = this.readOnly.includes(name);
           return (
-            <tr key = {`row-name-${index}`}>
+            <tr key = {`row-name-${index}`} className = {readOnly? "read-only" : ""}>
               <td key = {`col-name-${index}`}>{name}</td>
               <td key = {`col-val-${index}`} onClick = {this.onClick.bind(this,name,val)}>
-                {this.state.editing === name ? 
+                {(this.state.editing === name && !readOnly)? 
                   <input 
                   onChange = {this.onChange.bind(this)}
                   type = "text" 

@@ -38,10 +38,10 @@ export default class ComponentBar extends Component {
             return (    
               <div
                 key = {`component-bar-component-${id}`} 
-                className = {`component-bar__component component-bar__component--${component.name}`}
-                onClick = {this.props.onChoice.bind(this,{name:component.name,...component.props})}
+                className = {`component-bar__component component-bar__component--${component.component}`}
+                onClick = {this.props.onChoice.bind(this,{component:component.component,...component.props})}
               >
-              <img src = {this.thumbs[component.thumb]} alt = {component.name}/>
+              <img src = {this.thumbs[component.thumb]} alt = {component.component}/>
               <div className = 'component-bar__label'>{component.label}</div>
               </div>
             )
